@@ -29,7 +29,7 @@ router.route("/user").post(async (request,response) =>{
     }
     catch(err){
         console.log(err);
-        response.send({message:err} );
+        response.send({message:"error occurred"} );
     }
 
     
