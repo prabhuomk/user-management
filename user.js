@@ -72,13 +72,13 @@ router.route("/user/:_id").get(async (request,response)=>{
         console.log(typeof(Email._id.toString()));
         console.log(typeof(id.toString()))
         if( (Email !== null) && (Email._id.toString() !== id.toString() )&& (Number!== null) && (Number._id.toString() !== id.toString()) ){
-            response.send({message:"email id and mobile number already exist"});
+            response.send({message:"email id and mobile number already exist, try new one"});
             }
         
         else if((Email !== null) && (Email._id.toString() !== id.toString() ))
         {
             
-            response.send({message:"email id already exist"});
+            response.send({message:"email id already exist, try new one"});
         }
         else if((Number!== null) && (Number._id.toString() !== id.toString()) ){
             
