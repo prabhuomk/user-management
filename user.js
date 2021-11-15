@@ -69,8 +69,7 @@ router.route("/user/:_id").get(async (request,response)=>{
         const Email=await GetUserBy(client,{email})
         
         const Number=await GetUserBy(client,{mobile})
-        console.log(typeof(Email._id.toString()));
-        console.log(typeof(id.toString()))
+        
         if( (Email !== null) && (Email._id.toString() !== id.toString() )&& (Number!== null) && (Number._id.toString() !== id.toString()) ){
             response.send({message:"email id and mobile number already exist, try new one"});
             }

@@ -26,7 +26,7 @@ export async function getOneUser(client,_id){
 }
 export async function updateUser(client,_id,user){
     const result=await client.db("user_management").collection("users").updateOne({_id:new mongodb.ObjectId(_id)},{$set:user})
-    console.log("successfully user data got deleted",result);
+    console.log("successfully user data got updated",result);
     return result;
 }
 
